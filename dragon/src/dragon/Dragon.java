@@ -7,7 +7,7 @@ package dragon;
 
 /**
  *
- * @author Bolotoff
+ * @author Finke
  */
 public class Dragon {
 
