@@ -7,6 +7,7 @@ package dragon;
 
 import byui.cit260.dragon.model.Activity;
 import byui.cit260.dragon.model.Player;
+import byui.cit260.dragon.model.Items; 
 
 /**
  *
@@ -44,6 +45,23 @@ public class Dragon {
     String activityInfo = feed.toString();
     System.out.println(activityInfo);
     
+    Items buy = new Items();
+    buy.setCost(1);
+    buy.setBrain(1);
+    buy.setActivityType("Buy new item");
+    buy.setDepartment("Shop");
+    buy.setName("Max");
+    buy.setHygene(1);
+    buy.setLegs(1);
+    buy.setWings(1);
+    buy.setTail(1);
+    buy.setSick(false);
+    buy.setMood(2);
+    buy.setShape(2);
+    buy.setTired(1);
+    
+    String itemsInfo = buy.toString();
+    System.out.println(itemsInfo);
     }
     
 }
