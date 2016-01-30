@@ -8,7 +8,10 @@ package dragon;
 import byui.cit260.dragon.model.Activity;
 import byui.cit260.dragon.model.Player;
 import byui.cit260.dragon.model.Items; 
-
+import byui.cit260.dragon.model.Shop; 
+import byui.cit260.dragon.model.Sport; 
+import byui.cit260.dragon.model.Food;
+import byui.cit260.dragon.model.Pharmacy;
 /**
  *
  * @author Finke
