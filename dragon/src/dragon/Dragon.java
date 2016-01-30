@@ -12,6 +12,7 @@ import byui.cit260.dragon.model.Shop;
 import byui.cit260.dragon.model.Sport; 
 import byui.cit260.dragon.model.Food;
 import byui.cit260.dragon.model.Pharmacy;
+import byui.cit260.dragon.model.Game;
 /**
  *
  * @author Finke
