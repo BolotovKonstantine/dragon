@@ -6,6 +6,9 @@
 package dragon;
 
 import byui.cit260.dragon.model.Activity;
+import byui.cit260.dragon.model.Actor;
+import byui.cit260.dragon.model.DragonC;
+import byui.cit260.dragon.model.Inventory;
 import byui.cit260.dragon.model.Player;
 
 /**
@@ -44,6 +47,38 @@ public class Dragon {
     String activityInfo = feed.toString();
     System.out.println(activityInfo);
     
+    DragonC friend;
+        friend = new DragonC();
+    
+    friend.setName("Friend");
+    friend.setMood(2);
+    friend.setHygene(1);
+    friend.setSick(false);
+    friend.setSickType("none");
+    friend.setWings(1);
+    friend.setBrain(1);
+    friend.setLegs(1);
+    friend.setTail(1);
+    friend.setShape(1);
+    friend.setTired(2);
+    friend.setAge(1);
+     String dragonInfo = friend.toString();
+    System.out.println(dragonInfo);
+    
+    
+    Actor actorOne;
+     actorOne = new Actor();
+     
+     actorOne.setName("Kostya");
+     actorOne.setScore(0);
+     
+        
+        Inventory playerOneInv;
+    playerOneInv = new Inventory();
+    playerOneInv.setMoney(100000);
+    
+     String playerInvInfo = playerOneInv.toString();
+        System.out.println(playerOneInv);
     }
     
 }
