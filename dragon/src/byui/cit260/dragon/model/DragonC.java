@@ -7,15 +7,13 @@ package byui.cit260.dragon.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-        
 /**
  *
  * @author Bolotoff
  */
-public class Activity implements Serializable {
-    
-    private double probability;
+public class DragonC implements Serializable {
     private String name;
+    private int age;
     private double mood;
     private double hygene;
     private boolean sick;
@@ -27,18 +25,9 @@ public class Activity implements Serializable {
     private double tired;
     private double brain;
 
-    public Activity() {
+    public DragonC() {
     }
     
-    
-
-    public double getProbability() {
-        return probability;
-    }
-
-    public void setProbability(double probability) {
-        this.probability = probability;
-    }
 
     public String getName() {
         return name;
@@ -46,6 +35,14 @@ public class Activity implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public double getMood() {
@@ -127,22 +124,22 @@ public class Activity implements Serializable {
     public void setBrain(double brain) {
         this.brain = brain;
     }
-    
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.probability) ^ (Double.doubleToLongBits(this.probability) >>> 32));
-        hash = 17 * hash + Objects.hashCode(this.name);
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.mood) ^ (Double.doubleToLongBits(this.mood) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.hygene) ^ (Double.doubleToLongBits(this.hygene) >>> 32));
-        hash = 17 * hash + (this.sick ? 1 : 0);
-        hash = 17 * hash + Objects.hashCode(this.sickType);
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.wings) ^ (Double.doubleToLongBits(this.wings) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.legs) ^ (Double.doubleToLongBits(this.legs) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.tail) ^ (Double.doubleToLongBits(this.tail) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.shape) ^ (Double.doubleToLongBits(this.shape) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.tired) ^ (Double.doubleToLongBits(this.tired) >>> 32));
+        int hash = 3;
+        hash = 31 * hash + Objects.hashCode(this.name);
+        hash = 31 * hash + this.age;
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.mood) ^ (Double.doubleToLongBits(this.mood) >>> 32));
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.hygene) ^ (Double.doubleToLongBits(this.hygene) >>> 32));
+        hash = 31 * hash + (this.sick ? 1 : 0);
+        hash = 31 * hash + Objects.hashCode(this.sickType);
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.wings) ^ (Double.doubleToLongBits(this.wings) >>> 32));
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.legs) ^ (Double.doubleToLongBits(this.legs) >>> 32));
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.tail) ^ (Double.doubleToLongBits(this.tail) >>> 32));
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.shape) ^ (Double.doubleToLongBits(this.shape) >>> 32));
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.tired) ^ (Double.doubleToLongBits(this.tired) >>> 32));
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.brain) ^ (Double.doubleToLongBits(this.brain) >>> 32));
         return hash;
     }
 
@@ -154,11 +151,11 @@ public class Activity implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Activity other = (Activity) obj;
-        if (Double.doubleToLongBits(this.probability) != Double.doubleToLongBits(other.probability)) {
+        final DragonC other = (DragonC) obj;
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.name, other.name)) {
+        if (this.age != other.age) {
             return false;
         }
         if (Double.doubleToLongBits(this.mood) != Double.doubleToLongBits(other.mood)) {
@@ -188,12 +185,15 @@ public class Activity implements Serializable {
         if (Double.doubleToLongBits(this.tired) != Double.doubleToLongBits(other.tired)) {
             return false;
         }
+        if (Double.doubleToLongBits(this.brain) != Double.doubleToLongBits(other.brain)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Activity{" + "probability=" + probability + ", name=" + name + ", mood=" + mood + ", hygene=" + hygene + ", sick=" + sick + ", sickType=" + sickType + ", wings=" + wings + ", legs=" + legs + ", tail=" + tail + ", shape=" + shape + ", tired=" + tired + '}';
+        return "DragonC{" + "name=" + name + ", age=" + age + ", mood=" + mood + ", hygene=" + hygene + ", sick=" + sick + ", sickType=" + sickType + ", wings=" + wings + ", legs=" + legs + ", tail=" + tail + ", shape=" + shape + ", tired=" + tired + ", brain=" + brain + '}';
     }
     
     
