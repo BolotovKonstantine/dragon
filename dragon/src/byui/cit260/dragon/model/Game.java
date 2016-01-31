@@ -11,14 +11,48 @@ import java.io.Serializable;
  * @author Karina
  */
 public class Game implements Serializable{
+    private int time;
 
     public Game() {
     }
 
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 23 * hash + this.time;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Game other = (Game) obj;
+        if (this.time != other.time) {
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public String toString() {
-        return "Game{" + '}';
+        return "Game{" + "time=" + time + '}';
     }
 
     
-}
+    }
+
+    
+    
