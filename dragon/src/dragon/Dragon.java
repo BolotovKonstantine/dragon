@@ -10,6 +10,10 @@ import byui.cit260.dragon.model.Actor;
 import byui.cit260.dragon.model.DragonC;
 import byui.cit260.dragon.model.Inventory;
 import byui.cit260.dragon.model.Player;
+import byui.cit260.dragon.model.Items; 
+import byui.cit260.dragon.model.Game;
+import byui.cit260.dragon.model.Shop;
+import byui.cit260.dragon.model.Department;
 
 /**
  *
@@ -79,6 +83,43 @@ public class Dragon {
     
      String playerInvInfo = playerOneInv.toString();
         System.out.println(playerOneInv);
+        
+        Items buy = new Items();
+    buy.setCost(1);
+    buy.setBrain(1);
+    buy.setActivityType("Buy new item");
+    buy.setDepartment("Shop");
+    buy.setName("Max");
+    buy.setHygene(1);
+    buy.setLegs(1);
+    buy.setWings(1);
+    buy.setTail(1);
+    buy.setSick(false);
+    buy.setMood(2);
+    buy.setShape(2);
+    buy.setTired(1);
+    
+    String itemsInfo = buy.toString();
+    System.out.println(itemsInfo);
+    
+    Game bestTime = new Game();
+        bestTime.setTime(10);
+     String timeInfo = bestTime.toString();
+    System.out.println(timeInfo); 
+    
+    Shop heal = new Shop();
+    heal.setBalance(1);
+        String healthInfo = heal.toString();
+    System.out.println(healthInfo);
+    
+    Department eat = new Department(); 
+    eat.setFood(1);
+    eat.setPharmacy(2);
+    eat.setSport(2);
+    eat.setName("Kind Of Food");
+    String eatMeal = eat.toString();
+    System.out.println(eatMeal);
     }
+    
     
 }
