@@ -7,6 +7,7 @@ package buyi.cit260.dragon.control;
 
 import byui.cit260.dragon.model.DragonC;
 import byui.cit260.dragon.model.Player;
+import buyi.cit260.dragon.control.DragonControl;
 
 /**
  *
@@ -14,12 +15,16 @@ import byui.cit260.dragon.model.Player;
  */
 public class GameControl {
 
-    public void startNewGame(String playerName,String dragonName) {
-      Player newPlayer = new Player() ;
-      newPlayer.setName(playerName);
-      DragonC newDragon = new DragonC();
-      newDragon.setName(dragonName);
-      initDragon(newDragon);
+    public void startNewGame(String playerName, String dragonName) {
+        DragonC newDragon = new DragonC();
+        newDragon.setName(dragonName);
+        DragonControl drC = new DragonControl();
+        drC.initDragon(newDragon);
+        DragonC oldDragon = new DragonC();
+        oldDragon.setName("Old Dragon");
+        drC.initDragon(oldDragon);
+        
+        
     }
 
     public boolean saveGame(boolean game) {
@@ -30,15 +35,9 @@ public class GameControl {
         return retrGame;
     }
 
-    public boolean createNewPlayer(boolean player) {
-        return player;
-    }
-
-    public int getTime(int time) {
-        return time;
-    }
-
-    public void setTime(int time) {
-
+    public Player createNewPlayer(String playerName) {
+        Player newPlayer = new Player();
+        newPlayer.setName(playerName);
+        return newPlayer;
     }
 }

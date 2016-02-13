@@ -5,6 +5,8 @@
  */
 package buyi.cit260.dragon.control;
 
+import byui.cit260.dragon.model.DragonC;
+
 /**
  *
  * @author Karina
@@ -26,8 +28,16 @@ public class InventoryControl {
     public double addToInventory(double inventoryItem, double ammount) {
         return inventoryItem;
     }
-
-    public double sendPhoto(double money) {
+    
+    
+    
+    public double sendPhoto(DragonC dragon, DragonC oldDragon ) {
+        double money = dragon.getBrain() - oldDragon.getBrain();
+        money = money + dragon.getLegs() - oldDragon.getLegs();
+        money = money + dragon.getHygene() - oldDragon.getHygene();
+        money = money + dragon.getShape() - oldDragon.getShape();
+        money = money + dragon.getTail() - oldDragon.getTail();
+        money = money + dragon.getWings() - oldDragon.getWings();
         return money;
     }
 
