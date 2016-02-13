@@ -6,11 +6,13 @@
 package byui.cit260.dragon.model;
 
 import java.io.Serializable;
+
 /**
  *
  * @author Karina
  */
-public class Game implements Serializable{
+public class Game implements Serializable {
+
     private int time;
 
     public Game() {
@@ -51,8 +53,4 @@ public class Game implements Serializable{
         return "Game{" + "time=" + time + '}';
     }
 
-    
-    }
-
-    
-    
+}

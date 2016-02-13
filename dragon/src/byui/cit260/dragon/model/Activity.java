@@ -7,13 +7,13 @@ package byui.cit260.dragon.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-        
+
 /**
  *
  * @author Bolotoff
  */
 public class Activity implements Serializable {
-    
+
     private double probability;
     private String name;
     private double mood;
@@ -29,8 +29,6 @@ public class Activity implements Serializable {
 
     public Activity() {
     }
-    
-    
 
     public double getProbability() {
         return probability;
@@ -127,7 +125,6 @@ public class Activity implements Serializable {
     public void setBrain(double brain) {
         this.brain = brain;
     }
-    
 
     @Override
     public int hashCode() {
@@ -195,8 +192,5 @@ public class Activity implements Serializable {
     public String toString() {
         return "Activity{" + "probability=" + probability + ", name=" + name + ", mood=" + mood + ", hygene=" + hygene + ", sick=" + sick + ", sickType=" + sickType + ", wings=" + wings + ", legs=" + legs + ", tail=" + tail + ", shape=" + shape + ", tired=" + tired + '}';
     }
-    
-    
-            
-    
+
 }

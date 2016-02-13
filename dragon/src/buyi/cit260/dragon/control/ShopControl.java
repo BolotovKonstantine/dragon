@@ -11,22 +11,23 @@ package buyi.cit260.dragon.control;
  */
 public class ShopControl {
 
-public double sellItem(double itemProp){
-return itemProp;
-} 
-
-public boolean formSellingList(boolean newList){
-return newList;
-}
-public double getBalance(double balance) {
- return balance;       
+    public double sellItem(double itemProp) {
+        return itemProp;
     }
 
-public double getSellingList (double sellingList){
-return sellingList;
-}
+    public boolean formSellingList(boolean newList) {
+        return newList;
+    }
 
-public double getDepartmentList (double departmentList){
-return departmentList;
-}
+    public double getBalance(double balance) {
+        return balance;
+    }
+
+    public double getSellingList(double sellingList) {
+        return sellingList;
+    }
+
+    public double getDepartmentList(double departmentList) {
+        return departmentList;
+    }
 }

@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package byui.cit260.dragon.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Karina
  */
-public class Department implements Serializable{
+public class Department implements Serializable {
 
     private String name;
     private double food;
@@ -91,7 +93,4 @@ public class Department implements Serializable{
         return "Department{" + "name=" + name + ", food=" + food + ", sport=" + sport + ", pharmacy=" + pharmacy + '}';
     }
 
-    
-    
-    
 }

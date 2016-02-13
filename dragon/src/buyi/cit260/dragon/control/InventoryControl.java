@@ -11,29 +11,28 @@ package buyi.cit260.dragon.control;
  */
 public class InventoryControl {
 
-public double getMoney(double money) {
+    public double getMoney(double money) {
         return money;
-    } 
+    }
 
-public double buyItem(double itemProp){
-return itemProp;
+    public double buyItem(double itemProp) {
+        return itemProp;
+    }
+
+    public double abilityToBuy(double inventoryItem, double amount, double money) {
+        return inventoryItem;
+    }
+
+    public double addToInventory(double inventoryItem, double ammount) {
+        return inventoryItem;
+    }
+
+    public double sendPhoto(double money) {
+        return money;
+    }
+
+    public double removeFromInventory(double inventoryItem, double amount) {
+        return amount;
+    }
+
 }
-
-public double abilityToBuy(double inventoryItem, double amount, double money){
-return inventoryItem;
-}
-
-public double addToInventory(double inventoryItem, double ammount){
-return inventoryItem;
-}
-
-public double sendPhoto(double money){
-return money;
-}
-
-public double removeFromInventory(double inventoryItem, double amount){
-return amount;
-}
-
-}
-

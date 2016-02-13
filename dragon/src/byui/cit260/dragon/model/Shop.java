@@ -6,14 +6,14 @@
 package byui.cit260.dragon.model;
 
 import java.io.Serializable;
+
 /**
  *
  * @author Karina
  */
-public class Shop implements Serializable{
+public class Shop implements Serializable {
 
-private double balance;
-
+    private double balance;
 
     public Shop() {
     }
@@ -53,8 +53,4 @@ private double balance;
         return "Shop{" + "balance=" + balance + '}';
     }
 
-        
-    }
- 
-    
-
+}

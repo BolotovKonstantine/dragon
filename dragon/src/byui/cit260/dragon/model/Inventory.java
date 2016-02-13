@@ -4,21 +4,21 @@
  * and open the template in the editor.
  */
 package byui.cit260.dragon.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Bolotoff
  */
-public class Inventory implements Serializable{
-    
+public class Inventory implements Serializable {
+
     private double money;
 
     public Inventory() {
     }
 
-    
-    
     public double getMoney() {
         return money;
     }
@@ -53,8 +53,5 @@ public class Inventory implements Serializable{
     public String toString() {
         return "Inventory{" + "money=" + money + '}';
     }
-    
-    
-    
-    
+
 }

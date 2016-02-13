@@ -11,27 +11,27 @@ package buyi.cit260.dragon.control;
  */
 public class GameControl {
 
-    public boolean startNewGame(boolean newGame){
-   return newGame; 
+    public boolean startNewGame(boolean newGame) {
+        return newGame;
     }
-    
-    public boolean saveGame(boolean game){
-    return game;
+
+    public boolean saveGame(boolean game) {
+        return game;
     }
-    
-    public boolean retriveGame(boolean retrGame){
-    return retrGame;
+
+    public boolean retriveGame(boolean retrGame) {
+        return retrGame;
     }
-    
-  public boolean createNewPlayer(boolean player){
-  return player;
-  }  
-  
-  public int getTime(int time) {
+
+    public boolean createNewPlayer(boolean player) {
+        return player;
+    }
+
+    public int getTime(int time) {
         return time;
     }
-  
-   public void setTime(int time) {
- 
+
+    public void setTime(int time) {
+
     }
 }

@@ -12,14 +12,13 @@ import java.util.Objects;
  *
  * @author Karina
  */
-public class Player implements Serializable{
-private String name;
-private double bestTime;
+public class Player implements Serializable {
+
+    private String name;
+    private double bestTime;
 
     public Player() {
     }
-
-
 
     public String getName() {
         return name;
@@ -67,6 +66,5 @@ private double bestTime;
     public String toString() {
         return "Player{" + "name=" + name + ", bestTime=" + bestTime + '}';
     }
-    
 
 }

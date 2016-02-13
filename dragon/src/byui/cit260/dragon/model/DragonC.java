@@ -7,11 +7,13 @@ package byui.cit260.dragon.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Bolotoff
  */
 public class DragonC implements Serializable {
+
     private String name;
     private int age;
     private double mood;
@@ -27,7 +29,6 @@ public class DragonC implements Serializable {
 
     public DragonC() {
     }
-    
 
     public String getName() {
         return name;
@@ -195,8 +196,5 @@ public class DragonC implements Serializable {
     public String toString() {
         return "DragonC{" + "name=" + name + ", age=" + age + ", mood=" + mood + ", hygene=" + hygene + ", sick=" + sick + ", sickType=" + sickType + ", wings=" + wings + ", legs=" + legs + ", tail=" + tail + ", shape=" + shape + ", tired=" + tired + ", brain=" + brain + '}';
     }
-    
-    
-            
-    
+
 }

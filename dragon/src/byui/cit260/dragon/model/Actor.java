@@ -4,19 +4,21 @@
  * and open the template in the editor.
  */
 package byui.cit260.dragon.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Bolotoff
  */
-public class Actor implements Serializable{
+public class Actor implements Serializable {
+
     private String name;
     private double score;
 
     public Actor() {
     }
-    
 
     public String getName() {
         return name;
@@ -64,5 +66,5 @@ public class Actor implements Serializable{
     public String toString() {
         return "Actor{" + "name=" + name + ", score=" + score + '}';
     }
-    
+
 }

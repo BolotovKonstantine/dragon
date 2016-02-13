@@ -7,11 +7,12 @@ package byui.cit260.dragon.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Karina
  */
-public class Items implements Serializable{
+public class Items implements Serializable {
 
     private double cost;
     private double mood;
@@ -30,7 +31,6 @@ public class Items implements Serializable{
     public Items() {
     }
 
-       
     public double getCost() {
         return cost;
     }
@@ -209,6 +209,5 @@ public class Items implements Serializable{
     public String toString() {
         return "Items{" + "cost=" + cost + ", mood=" + mood + ", hygene=" + hygene + ", sick=" + sick + ", wings=" + wings + ", brain=" + brain + ", legs=" + legs + ", tail=" + tail + ", shape=" + shape + ", tired=" + tired + ", name=" + name + ", activityType=" + activityType + ", department=" + department + '}';
     }
- 
-    
+
 }
