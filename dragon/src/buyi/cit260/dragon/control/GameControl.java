@@ -5,14 +5,21 @@
  */
 package buyi.cit260.dragon.control;
 
+import byui.cit260.dragon.model.DragonC;
+import byui.cit260.dragon.model.Player;
+
 /**
  *
  * @author Karina
  */
 public class GameControl {
 
-    public boolean startNewGame(boolean newGame) {
-        return newGame;
+    public void startNewGame(String playerName,String dragonName) {
+      Player newPlayer = new Player() ;
+      newPlayer.setName(playerName);
+      DragonC newDragon = new DragonC();
+      newDragon.setName(dragonName);
+      initDragon(newDragon);
     }
 
     public boolean saveGame(boolean game) {

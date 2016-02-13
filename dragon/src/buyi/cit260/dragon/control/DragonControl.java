@@ -49,7 +49,8 @@ public class DragonControl {
         boolean newHealthModifier = itemProp & actionProp;
         return newHealthModifier;
     }
-    public DragonC initDragon(DragonC dragon){
+
+    public DragonC initDragon(DragonC dragon) {
         dragon.setAge(0);
         dragon.setBrain(1);
         dragon.setHygene(5);
