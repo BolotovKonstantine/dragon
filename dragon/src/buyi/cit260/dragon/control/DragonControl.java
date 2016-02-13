@@ -5,6 +5,8 @@
  */
 package buyi.cit260.dragon.control;
 
+import byui.cit260.dragon.model.DragonC;
+
 /**
  *
  * @author Karina
@@ -46,5 +48,20 @@ public class DragonControl {
     public boolean calcHealthModifier(boolean itemProp, boolean actionProp) {
         boolean newHealthModifier = itemProp & actionProp;
         return newHealthModifier;
+    }
+    public DragonC initDragon(DragonC dragon){
+        dragon.setAge(0);
+        dragon.setBrain(1);
+        dragon.setHygene(5);
+        dragon.setLegs(1);
+        dragon.setMood(7);
+        dragon.setSick(false);
+        dragon.setBrain(1);
+        dragon.setLegs(1);
+        dragon.setTail(1);
+        dragon.setWings(1);
+        dragon.setTired(0);
+        dragon.setShape(5);
+        return dragon;
     }
 }
