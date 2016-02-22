@@ -13,6 +13,7 @@ class GameMenuView {
 
     void displayMenu() {
         System.out.println("\n*** displayMenu stub function called ***");
+
     }
-    
+
 }

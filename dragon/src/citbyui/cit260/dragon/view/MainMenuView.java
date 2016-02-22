@@ -14,49 +14,49 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-
 public class MainMenuView {
-    
- private String menu;  
 
-  MainMenuView() {
- this.menu = "\n"
-           + "\n----------------------------------------"
-           + "\n| Main Menu                            |"
-           + "\n----------------------------------------"
-           + "\nN - Start new game"
-           + "\nG - Get and start saved game"
-           + "\nH - Get help on how to play the game"
-           + "\nS - Save game"
-           + "\nQ - Quit"
-           + "\n----------------------------------------";
-}
+    private String menu;
+
+    MainMenuView() {
+        this.menu = "\n"
+                + "\n----------------------------------------"
+                + "\n| Main Menu                            |"
+                + "\n----------------------------------------"
+                + "\nN - Start new game"
+                + "\nG - Get and start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nS - Save game"
+                + "\nQ - Quit"
+                + "\n----------------------------------------";
+    }
 
     public void displayMainMenuView() {
-    boolean done = false;
-    do{
-        String menuOption = this.getMenuOption();
-        if (menuOption.toUpperCase().equals("Q"))
-            return;
-        done = this.doAction(menuOption);
-    }while (!done);
+        boolean done = false;
+        do {
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals("Q")) {
+                return;
+            }
+            done = this.doAction(menuOption);
+        } while (!done);
     }
 
     private String getMenuOption() {
         Scanner keyboard = new Scanner(System.in);
-    String value = "";
-    boolean valid = false;
-    while (!valid) {
-        System.out.println("\n" + this.menu);
-        value = keyboard.nextLine();
-        value = value.trim();
-        if (value.length() < 1) {
-        System.out.println("\nInvalid value: value can not be blank");
-        continue;
+        String value = "";
+        boolean valid = false;
+        while (!valid) {
+            System.out.println("\n" + this.menu);
+            value = keyboard.nextLine();
+            value = value.trim();
+            if (value.length() < 1) {
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break;
         }
-        break;
-    }
-    return value;
+        return value;
     }
 
     private boolean doAction(String choice) {
@@ -76,15 +76,15 @@ public class MainMenuView {
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
-break;
+                break;
         }
         return false;
     }
 
     private void startNewGame() {
-    GameControl.createNewGame(Dragon.getPlayer());
-    GameMenuView gameMenu = new GameMenuView();
-    gameMenu.displayMenu();
+        GameControl.createNewGame(Dragon.getPlayer());
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
 
     private void startExistingGame() {
@@ -98,6 +98,4 @@ break;
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
     }
-    }
-    
-
+}
