@@ -84,7 +84,7 @@ public class MainMenuView {
     private void startNewGame() {
         GameControl.createNewGame(Dragon.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenu();
     }
 
     private void startExistingGame() {
