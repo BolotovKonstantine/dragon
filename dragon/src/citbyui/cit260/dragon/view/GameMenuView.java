@@ -120,11 +120,13 @@ class GameMenuView {
     }
 
     private void playMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        PlayMenuView playMenu = new PlayMenuView();
+        playMenu.displayPlayMenuView();
     }
 
     private void teachMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      TrainMenuView trainMenu = new TrainMenuView();
+        trainMenu.displayTrainMenuView();
     }
 
     private void healMenu() {
