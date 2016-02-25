@@ -28,10 +28,8 @@ public class InventoryControl {
     public double addToInventory(double inventoryItem, double ammount) {
         return inventoryItem;
     }
-    
-    
-    
-    public double sendPhoto(DragonC dragon, DragonC oldDragon ) {
+
+    public double sendPhoto(DragonC dragon, DragonC oldDragon) {
         double money = dragon.getBrain() - oldDragon.getBrain();
         money = money + dragon.getLegs() - oldDragon.getLegs();
         money = money + dragon.getHygene() - oldDragon.getHygene();

@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-/** Train dragon(what to train) 10 points:
-This screen allows user to train different 
-parameters of dragon effectiveness also depends 
-on inventory
-*/
+/**
+ * Train dragon(what to train) 10 points: This screen allows user to train
+ * different parameters of dragon effectiveness also depends on inventory
+ */
 public class TrainMenuView {
-private String menu;
+
+    private String menu;
 
     public TrainMenuView() {
         this.menu = "\n"
@@ -31,7 +31,7 @@ private String menu;
                 + "\nQ - Quit"
                 + "\n----------------------------------------";
     }
-    
+
     public void displayTrainMenuView() {
         boolean done = false;
         do {
@@ -75,7 +75,7 @@ private String menu;
             case "W":
                 this.dragonWings();
                 break;
-                         
+
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
@@ -84,18 +84,18 @@ private String menu;
     }
 
     private void dragonBrain() {
-        System.out.println("*** dragonBrain function called ***");  
+        System.out.println("*** dragonBrain function called ***");
     }
 
     private void dragonTail() {
-        System.out.println("*** dragonTail function called ***");  
+        System.out.println("*** dragonTail function called ***");
     }
 
     private void dragonLegs() {
-        System.out.println("*** dragonLegs function called ***");  
+        System.out.println("*** dragonLegs function called ***");
     }
 
     private void dragonWings() {
-        System.out.println("*** dragonWings function called ***");  
+        System.out.println("*** dragonWings function called ***");
     }
 }

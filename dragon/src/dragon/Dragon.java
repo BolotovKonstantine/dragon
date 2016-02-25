@@ -21,6 +21,7 @@ import citbyui.cit260.dragon.view.StartProgramView;
  * @author Finke
  */
 public class Dragon {
+
     private static Game currentGame = null;
     private static Player player = null;
 
@@ -39,14 +40,13 @@ public class Dragon {
     public static void setPlayer(Player player) {
         Dragon.player = player;
     }
-    
-    
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    StartProgramView startProgramView = new StartProgramView();
-    startProgramView.displayStartProgramView();
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
     }
 
 }

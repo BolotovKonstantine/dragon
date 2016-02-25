@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-
-/** Heal dragon:
-Then your pet is sick you need to heal him
-*/
+/**
+ * Heal dragon: Then your pet is sick you need to heal him
+ */
 public class HealMenuView {
-private String menu;
+
+    private String menu;
 
     public HealMenuView() {
         this.menu = "\n"
@@ -29,9 +29,9 @@ private String menu;
                 + "\nX - Xanax"
                 + "\nQ - Quit"
                 + "\n----------------------------------------";
-       }
-    
-    public void displayHelpMenuView() {
+    }
+
+    public void displayHealMenuView() {
         boolean done = false;
         do {
             String menuOption = this.getMenuOption();
@@ -43,7 +43,7 @@ private String menu;
     }
 
     private String getMenuOption() {
-         Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
         while (!valid) {
@@ -74,26 +74,27 @@ private String menu;
             case "X":
                 this.takeXanax();
                 break;
-                         
+
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
-        return false;}
+        return false;
+    }
 
     private void dragonDoctor() {
-        System.out.println("*** dragonDoctor function called ***");  
+        System.out.println("*** dragonDoctor function called ***");
     }
 
     private void hugDragon() {
-         System.out.println("*** hugDragon function called ***");  
+        System.out.println("*** hugDragon function called ***");
     }
 
     private void takeIbprofen() {
-        System.out.println("*** takeIbprofen function called ***");  
+        System.out.println("*** takeIbprofen function called ***");
     }
 
     private void takeXanax() {
-        System.out.println("*** takeXanax function called ***");  
-     }
+        System.out.println("*** takeXanax function called ***");
+    }
 }

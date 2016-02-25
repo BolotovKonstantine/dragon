@@ -12,8 +12,8 @@ import java.util.Scanner;
  * @author Karina
  */
 public class HelpMenuView {
- 
-     private String menu;
+
+    private String menu;
 
     public HelpMenuView() {
         this.menu = "\n"
@@ -26,7 +26,8 @@ public class HelpMenuView {
                 + "\nI - Items help "
                 + "\nQ - Quit"
                 + "\n----------------------------------------";
-       }
+    }
+
     public void displayHelpMenuView() {
         boolean done = false;
         do {
@@ -37,7 +38,7 @@ public class HelpMenuView {
             done = this.doAction(menuOption);
         } while (!done);
     }
-    
+
     private String getMenuOption() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
@@ -54,6 +55,7 @@ public class HelpMenuView {
         }
         return value;
     }
+
     private boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -69,7 +71,7 @@ public class HelpMenuView {
             case "I":
                 this.itemHelp();
                 break;
-                         
+
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
@@ -99,11 +101,11 @@ public class HelpMenuView {
     }
 
     private void dragonStatus() {
-      System.out.println("*** showDragonStatus function called ***");  
+        System.out.println("*** showDragonStatus function called ***");
     }
 
     private void itemHelp() {
         System.out.println("*** showItemHelps function called ***");
     }
 
-    }
+}

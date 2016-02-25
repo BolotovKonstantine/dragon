@@ -128,7 +128,8 @@ class GameMenuView {
     }
 
     private void healMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        HealMenuView healMenu = new HealMenuView();
+        healMenu.displayHealMenuView();
     }
 
     private void washMenu() {
@@ -156,6 +157,8 @@ class GameMenuView {
     }
 
     private void helpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
+
     }
 }

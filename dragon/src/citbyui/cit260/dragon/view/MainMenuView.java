@@ -92,12 +92,12 @@ public class MainMenuView {
     }
 
     private void displayHelpMenu() {
-      HelpMenuView helpMenu = new HelpMenuView();
-      helpMenu.displayHelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
     }
 
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
-        
+
     }
 }

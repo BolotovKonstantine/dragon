@@ -10,13 +10,15 @@ import java.util.Scanner;
 /**
  *
  * @author Karina
- *//** Play with dragon(games):
-This screen allows user to play with dragon 
- games avialibility depends on players inventory.
-*/
- 
+ */
+/**
+ * Play with dragon(games): This screen allows user to play with dragon games
+ * avialibility depends on players inventory.
+ */
+
 public class PlayMenuView {
-private String menu;
+
+    private String menu;
 
     public PlayMenuView() {
         this.menu = "\n"
@@ -29,8 +31,8 @@ private String menu;
                 + "\nN - Numbers"
                 + "\nQ - Quit"
                 + "\n----------------------------------------";
-       }
-    
+    }
+
     public void displayPlayMenuView() {
         boolean done = false;
         do {
@@ -60,7 +62,7 @@ private String menu;
     }
 
     private boolean doAction(String choice) {
-    choice = choice.toUpperCase();
+        choice = choice.toUpperCase();
         switch (choice) {
             case "B":
                 this.ball();
@@ -74,27 +76,27 @@ private String menu;
             case "N":
                 this.numbers();
                 break;
-                         
+
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
-        return false;    
+        return false;
     }
 
     private void ball() {
-        System.out.println("*** Ball function called ***");  
+        System.out.println("*** Ball function called ***");
     }
 
     private void tickleDragon() {
-        System.out.println("*** tickleDragon function called ***");  
+        System.out.println("*** tickleDragon function called ***");
     }
 
     private void hugDragon() {
-        System.out.println("*** hugDragon function called ***");  
+        System.out.println("*** hugDragon function called ***");
     }
 
     private void numbers() {
-       System.out.println("*** numbers function called ***");  
+        System.out.println("*** numbers function called ***");
     }
 }

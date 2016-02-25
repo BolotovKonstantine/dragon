@@ -22,15 +22,13 @@ public class GameControl {
         }
         Player player = new Player();
         player.setName(name);
-    Dragon.setPlayer(player);
-    return player;
+        Dragon.setPlayer(player);
+        return player;
     }
 
     public static void createNewGame(Player player) {
-    System.out.println("\n*** createNewGame stub function called ***");
+        System.out.println("\n*** createNewGame stub function called ***");
     }
-    
-    
 
     public void startNewGame(String playerName, String dragonName) {
         DragonC newDragon = new DragonC();
@@ -40,8 +38,7 @@ public class GameControl {
         DragonC oldDragon = new DragonC();
         oldDragon.setName("Old Dragon");
         drC.initDragon(oldDragon);
-        
-        
+
     }
 
     public boolean saveGame(boolean game) {
