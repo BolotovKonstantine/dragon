@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-public abstract class View implements ViewInterface {
+public abstract class View implements ViewInterface{
 protected String displayMessage;
 public View(){
 }
@@ -47,3 +47,5 @@ private String getInput() {
 
 
 }
+    
+
