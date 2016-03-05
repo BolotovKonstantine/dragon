@@ -28,7 +28,7 @@ if (value.toUpperCase().equals("Q"))
 done = this.doAction(value);
 }while (!done);
 }
-private String getInput() {
+public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;

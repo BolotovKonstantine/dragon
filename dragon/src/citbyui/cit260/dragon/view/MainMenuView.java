@@ -7,7 +7,6 @@ package citbyui.cit260.dragon.view;
 
 import buyi.cit260.dragon.control.GameControl;
 import dragon.Dragon;
-import static java.awt.SystemColor.menu;
 import java.util.Scanner;
 
 /**
@@ -58,8 +57,8 @@ public class MainMenuView extends View {
         }
         return value;
     }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "N":
