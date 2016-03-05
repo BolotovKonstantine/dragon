@@ -9,11 +9,11 @@ package citbyui.cit260.dragon.view;
  *
  * @author Karina
  */
-public interface ViewInterface{
+public interface ViewInterface {
 
-public void display();
-public String getInput();
-public boolean doAction(String value);
+    public void display();
+
+    public String getInput();
+
+    public boolean doAction(String value);
 }
-
-

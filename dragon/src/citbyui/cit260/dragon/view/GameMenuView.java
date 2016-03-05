@@ -125,7 +125,7 @@ class GameMenuView {
     }
 
     private void teachMenu() {
-      TrainMenuView trainMenu = new TrainMenuView();
+        TrainMenuView trainMenu = new TrainMenuView();
         trainMenu.displayTrainMenuView();
     }
 

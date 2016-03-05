@@ -57,6 +57,7 @@ public class MainMenuView extends View {
         }
         return value;
     }
+
     @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();

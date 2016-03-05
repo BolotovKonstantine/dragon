@@ -15,7 +15,6 @@ import java.util.Scanner;
  * Play with dragon(games): This screen allows user to play with dragon games
  * avialibility depends on players inventory.
  */
-
 public class PlayMenuView {
 
     private String menu;
