@@ -15,10 +15,8 @@ import java.util.Scanner;
  */
 public class MainMenuView extends View {
 
-    private String menu;
-
-    MainMenuView() {
-        this.menu = "\n"
+   MainMenuView() {
+   super(         "\n"
                 + "\n----------------------------------------"
                 + "\n| Main Menu                            |"
                 + "\n----------------------------------------"
@@ -27,7 +25,8 @@ public class MainMenuView extends View {
                 + "\nH - Get help on how to play the game"
                 + "\nS - Save game"
                 + "\nQ - Quit"
-                + "\n----------------------------------------";
+                + "\n----------------------------------------"
+   );
     }
 
     public void displayMainMenuView() {
@@ -46,7 +45,7 @@ public class MainMenuView extends View {
         String value = "";
         boolean valid = false;
         while (!valid) {
-            System.out.println("\n" + this.menu);
+            System.out.println("\n" + this.displayMessage);
             value = keyboard.nextLine();
             value = value.trim();
             if (value.length() < 1) {
@@ -59,7 +58,9 @@ public class MainMenuView extends View {
     }
 
     @Override
-    public boolean doAction(String choice) {
+
+        public boolean doAction(String choice) {
+
         choice = choice.toUpperCase();
         switch (choice) {
             case "N":
