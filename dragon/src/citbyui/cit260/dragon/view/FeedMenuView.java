@@ -5,10 +5,44 @@
  */
 package citbyui.cit260.dragon.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Karina
  */
-public abstract class FeedMenuView implements FeedInterface{
-    
+public abstract class FeedMenuView implements ViewInterface{
+protected String displayMessage;
+public FeedMenuView(){
+}
+public FeedMenuView(String message){
+this.displayMessage = message;
+}
+@Override
+public void display() {
+boolean done = false;
+do {
+String value = this.getInput();
+if (value.toUpperCase().equals("Q"))
+    return;
+done = this.doAction(value);
+}while (!done);
+}
+@Override
+public String getInput() {
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+        while (!valid) {
+            System.out.println("\n" + this.displayMessage);
+            value = keyboard.nextLine();
+            value = value.trim();
+            if (value.length() < 1) {
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break;
+        }
+        return value;
+    }    
 }
