@@ -14,7 +14,6 @@ import java.util.Scanner;
  * @author Karina
  */
 public class MainMenuView extends View {
-
     MainMenuView() {
         super("\n"
                 + "\n----------------------------------------"
@@ -29,36 +28,7 @@ public class MainMenuView extends View {
         );
     }
 
-    public void displayMainMenuView() {
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(menuOption);
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        while (!valid) {
-            System.out.println("\n" + this.displayMessage);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
     @Override
-
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase();
@@ -85,7 +55,7 @@ public class MainMenuView extends View {
     private void startNewGame() {
         GameControl.createNewGame(Dragon.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenu();
+        gameMenu.display();
     }
 
     private void startExistingGame() {
@@ -94,7 +64,7 @@ public class MainMenuView extends View {
 
     private void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
     private void saveGame() {

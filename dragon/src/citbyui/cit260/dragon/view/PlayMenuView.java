@@ -15,12 +15,9 @@ import java.util.Scanner;
  * Play with dragon(games): This screen allows user to play with dragon games
  * avialibility depends on players inventory.
  */
-public class PlayMenuView {
-
-    private String menu;
-
+public class PlayMenuView extends View{
     public PlayMenuView() {
-        this.menu = "\n"
+        super ("\n"
                 + "\n----------------------------------------"
                 + "\n| Play Menu                            |"
                 + "\n----------------------------------------"
@@ -29,38 +26,11 @@ public class PlayMenuView {
                 + "\nH -Hug"
                 + "\nN - Numbers"
                 + "\nQ - Quit"
-                + "\n----------------------------------------";
+                + "\n----------------------------------------");
     }
 
-    public void displayPlayMenuView() {
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(menuOption);
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+        public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "B":

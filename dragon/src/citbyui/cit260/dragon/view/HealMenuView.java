@@ -14,12 +14,10 @@ import java.util.Scanner;
 /**
  * Heal dragon: Then your pet is sick you need to heal him
  */
-public class HealMenuView {
-
-    private String menu;
+public class HealMenuView extends View{
 
     public HealMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Heal Menu                            |"
                 + "\n----------------------------------------"
@@ -28,38 +26,11 @@ public class HealMenuView {
                 + "\nI - Ibprofen"
                 + "\nX - Xanax"
                 + "\nQ - Quit"
-                + "\n----------------------------------------";
+                + "\n----------------------------------------");
     }
 
-    public void displayHealMenuView() {
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(menuOption);
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "D":

@@ -11,12 +11,9 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-class GameMenuView {
-
-    private String menu;
-
+public class GameMenuView extends View{
     public GameMenuView() {
-        this.menu = "\n"
+        super  ("\n"
                 + "\n----------------------------------------"
                 + "\n| Game Menu                            |"
                 + "\n----------------------------------------"
@@ -33,38 +30,10 @@ class GameMenuView {
                 + "\nJ - Try to make dragon flying"
                 + "\nH - Help"
                 + "\nQ - Quit"
-                + "\n----------------------------------------";
+                + "\n----------------------------------------");
     }
-
-    public void displayGameMenu() {
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(menuOption);
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+@Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "S":
@@ -121,17 +90,17 @@ class GameMenuView {
 
     private void playMenu() {
         PlayMenuView playMenu = new PlayMenuView();
-        playMenu.displayPlayMenuView();
+        playMenu.display();
     }
 
     private void teachMenu() {
         TrainMenuView trainMenu = new TrainMenuView();
-        trainMenu.displayTrainMenuView();
+        trainMenu.display();
     }
 
     private void healMenu() {
         HealMenuView healMenu = new HealMenuView();
-        healMenu.displayHealMenuView();
+        healMenu.display();
     }
 
     private void washMenu() {
@@ -160,7 +129,7 @@ class GameMenuView {
 
     private void helpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
 
     }
 }

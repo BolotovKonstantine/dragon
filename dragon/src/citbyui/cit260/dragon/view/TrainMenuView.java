@@ -15,12 +15,9 @@ import java.util.Scanner;
  * Train dragon(what to train) 10 points: This screen allows user to train
  * different parameters of dragon effectiveness also depends on inventory
  */
-public class TrainMenuView {
-
-    private String menu;
-
+public class TrainMenuView extends View{
     public TrainMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Train Menu                            |"
                 + "\n----------------------------------------"
@@ -29,38 +26,11 @@ public class TrainMenuView {
                 + "\nL - Legs"
                 + "\nW - Wings"
                 + "\nQ - Quit"
-                + "\n----------------------------------------";
+                + "\n----------------------------------------");
     }
 
-    public void displayTrainMenuView() {
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(menuOption);
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+        public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "B":
