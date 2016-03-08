@@ -15,9 +15,10 @@ import java.util.Scanner;
  * Play with dragon(games): This screen allows user to play with dragon games
  * avialibility depends on players inventory.
  */
-public class PlayMenuView extends View{
+public class PlayMenuView extends View {
+
     public PlayMenuView() {
-        super ("\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Play Menu                            |"
                 + "\n----------------------------------------"
@@ -30,7 +31,7 @@ public class PlayMenuView extends View{
     }
 
     @Override
-        public boolean doAction(String choice) {
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "B":

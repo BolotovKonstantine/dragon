@@ -11,10 +11,10 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-public class HelpMenuView extends View{
+public class HelpMenuView extends View {
 
-       public HelpMenuView() {
-        super ("\n"
+    public HelpMenuView() {
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Help Menu                            |"
                 + "\n----------------------------------------"
@@ -25,8 +25,9 @@ public class HelpMenuView extends View{
                 + "\nQ - Quit"
                 + "\n----------------------------------------");
     }
-@Override
-      public boolean doAction(String choice) {
+
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "G":

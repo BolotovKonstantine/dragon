@@ -15,7 +15,8 @@ import java.util.Scanner;
  * Train dragon(what to train) 10 points: This screen allows user to train
  * different parameters of dragon effectiveness also depends on inventory
  */
-public class TrainMenuView extends View{
+public class TrainMenuView extends View {
+
     public TrainMenuView() {
         super("\n"
                 + "\n----------------------------------------"
@@ -30,7 +31,7 @@ public class TrainMenuView extends View{
     }
 
     @Override
-        public boolean doAction(String choice) {
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "B":

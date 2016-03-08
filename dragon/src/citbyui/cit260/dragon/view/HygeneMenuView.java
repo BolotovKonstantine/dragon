@@ -11,9 +11,8 @@ package citbyui.cit260.dragon.view;
  */
 public class HygeneMenuView extends View {
 
-
-public HygeneMenuView(){
-           super("\n"
+    public HygeneMenuView() {
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Heal Menu                            |"
                 + "\n----------------------------------------"
@@ -23,8 +22,8 @@ public HygeneMenuView(){
                 + "\nX - Xanax"
                 + "\nQ - Quit"
                 + "\n----------------------------------------");
-}
-    
+    }
+
     @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();

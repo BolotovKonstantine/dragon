@@ -14,6 +14,7 @@ import java.util.Scanner;
  * @author Karina
  */
 public class MainMenuView extends View {
+
     MainMenuView() {
         super("\n"
                 + "\n----------------------------------------"

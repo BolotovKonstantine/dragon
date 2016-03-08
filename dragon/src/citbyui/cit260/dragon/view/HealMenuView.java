@@ -14,7 +14,7 @@ import java.util.Scanner;
 /**
  * Heal dragon: Then your pet is sick you need to heal him
  */
-public class HealMenuView extends View{
+public class HealMenuView extends View {
 
     public HealMenuView() {
         super("\n"

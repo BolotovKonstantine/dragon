@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-public class FeedMenuView extends View{
+public class FeedMenuView extends View {
 
     public FeedMenuView() {
         super("\n"

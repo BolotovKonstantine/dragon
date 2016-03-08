@@ -11,9 +11,10 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-public class GameMenuView extends View{
+public class GameMenuView extends View {
+
     public GameMenuView() {
-        super  ("\n"
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Game Menu                            |"
                 + "\n----------------------------------------"
@@ -32,7 +33,8 @@ public class GameMenuView extends View{
                 + "\nQ - Quit"
                 + "\n----------------------------------------");
     }
-@Override
+
+    @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -109,8 +111,8 @@ public class GameMenuView extends View{
     }
 
     private void feedMenu() {
-       FeedMenuView feedMenu = new FeedMenuView();
-       feedMenu.display();
+        FeedMenuView feedMenu = new FeedMenuView();
+        feedMenu.display();
     }
 
     private void sleepMenu() {
