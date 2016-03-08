@@ -104,7 +104,8 @@ public class GameMenuView extends View{
     }
 
     private void washMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        HygeneMenuView hygeneMenu = new HygeneMenuView();
+        hygeneMenu.display();
     }
 
     private void feedMenu() {

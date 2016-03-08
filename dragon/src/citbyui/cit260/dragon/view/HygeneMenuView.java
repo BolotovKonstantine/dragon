@@ -9,9 +9,24 @@ package citbyui.cit260.dragon.view;
  *
  * @author Bolotoff
  */
-public class HygeneMenuView {
+public class HygeneMenuView extends View {
 
-    private boolean doAction(String choice) {
+
+public HygeneMenuView(){
+           super("\n"
+                + "\n----------------------------------------"
+                + "\n| Heal Menu                            |"
+                + "\n----------------------------------------"
+                + "\nD - Doctor"
+                + "\nH - Hug"
+                + "\nI - Ibprofen"
+                + "\nX - Xanax"
+                + "\nQ - Quit"
+                + "\n----------------------------------------");
+}
+    
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "C":
