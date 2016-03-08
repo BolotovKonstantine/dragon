@@ -109,7 +109,8 @@ public class GameMenuView extends View{
     }
 
     private void feedMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       FeedMenuView feedMenu = new FeedMenuView();
+       feedMenu.display();
     }
 
     private void sleepMenu() {
