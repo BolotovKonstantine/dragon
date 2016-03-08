@@ -10,7 +10,7 @@ package citbyui.cit260.dragon.view;
  * @author Bolotoff
  */
 public class HygeneMenuView {
-   
+
     private boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -25,7 +25,7 @@ public class HygeneMenuView {
                 break;
         }
         return false;
-    } 
+    }
 
     private void cleanDragon() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

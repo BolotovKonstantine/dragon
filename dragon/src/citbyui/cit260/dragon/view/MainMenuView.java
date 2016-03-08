@@ -15,8 +15,8 @@ import java.util.Scanner;
  */
 public class MainMenuView extends View {
 
-   MainMenuView() {
-   super(         "\n"
+    MainMenuView() {
+        super("\n"
                 + "\n----------------------------------------"
                 + "\n| Main Menu                            |"
                 + "\n----------------------------------------"
@@ -26,7 +26,7 @@ public class MainMenuView extends View {
                 + "\nS - Save game"
                 + "\nQ - Quit"
                 + "\n----------------------------------------"
-   );
+        );
     }
 
     public void displayMainMenuView() {
@@ -59,7 +59,7 @@ public class MainMenuView extends View {
 
     @Override
 
-        public boolean doAction(String choice) {
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase();
         switch (choice) {

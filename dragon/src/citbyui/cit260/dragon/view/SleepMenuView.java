@@ -10,6 +10,7 @@ package citbyui.cit260.dragon.view;
  * @author Bolotoff
  */
 public class SleepMenuView {
+
     private boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -22,7 +23,7 @@ public class SleepMenuView {
             case "D":
                 this.deepSleep();
                 break;
-           default:
+            default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }

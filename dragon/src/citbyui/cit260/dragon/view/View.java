@@ -11,25 +11,31 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-public abstract class View implements ViewInterface{
-protected String displayMessage;
-public View(){
-}
-public View(String message){
-this.displayMessage = message;
-}
-@Override
-public void display() {
-boolean done = false;
-do {
-String value = this.getInput();
-if (value.toUpperCase().equals("Q"))
-    return;
-done = this.doAction(value);
-}while (!done);
-}
-@Override
-public String getInput() {
+public abstract class View implements ViewInterface {
+
+    protected String displayMessage;
+
+    public View() {
+    }
+
+    public View(String message) {
+        this.displayMessage = message;
+    }
+
+    @Override
+    public void display() {
+        boolean done = false;
+        do {
+            String value = this.getInput();
+            if (value.toUpperCase().equals("Q")) {
+                return;
+            }
+            done = this.doAction(value);
+        } while (!done);
+    }
+
+    @Override
+    public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
@@ -47,5 +53,3 @@ public String getInput() {
     }
 
 }
-    
-
