@@ -11,44 +11,58 @@ import java.util.Scanner;
  *
  * @author Karina
  */
-public abstract class FeedMenuView implements ViewInterface {
-
-    protected String displayMessage;
+public class FeedMenuView extends View{
 
     public FeedMenuView() {
-    }
-
-    public FeedMenuView(String message) {
-        this.displayMessage = message;
-    }
-
-    @Override
-    public void display() {
-        boolean done = false;
-        do {
-            String value = this.getInput();
-            if (value.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(value);
-        } while (!done);
+        super("\n"
+                + "\n----------------------------------------"
+                + "\n| Feed Menu                            |"
+                + "\n----------------------------------------"
+                + "\nS - Sweets"
+                + "\nM - Meat"
+                + "\nV - Vegetables"
+                + "\nG - Grass"
+                + "\nQ - Quit"
+                + "\n----------------------------------------");
     }
 
     @Override
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        while (!valid) {
-            System.out.println("\n" + this.displayMessage);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
+    public boolean doAction(String choice) {
+        choice = choice.toUpperCase();
+        switch (choice) {
+            case "S":
+                this.foodSweets();
+                break;
+            case "M":
+                this.foodMeat();
+                break;
+            case "V":
+                this.foodVegetables();
+                break;
+            case "G":
+                this.foodGrass();
+                break;
+
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+                break;
         }
-        return value;
+        return false;
+    }
+
+    private void foodSweets() {
+        System.out.println("*** foodSweets function called ***");
+    }
+
+    private void foodMeat() {
+        System.out.println("*** foodMeat function called ***");
+    }
+
+    private void foodVegetables() {
+        System.out.println("*** foodVegetables function called ***");
+    }
+
+    private void foodGrass() {
+        System.out.println("*** foodGrass function called ***");
     }
 }
