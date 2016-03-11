@@ -16,6 +16,15 @@ public class Player implements Serializable {
 
     private String name;
     private double bestTime;
+    private double score;
+
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
+    }
 
     public Player() {
     }
