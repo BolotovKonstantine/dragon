@@ -15,7 +15,36 @@ public class Game implements Serializable {
 
     private int time;
     private Player player;
+    private DragonC dragon;
+    private Shop shop;
+    private Items[] inventory;
 
+    public Items[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Items[] inventory) {
+        this.inventory = inventory;
+    }
+    
+
+    public DragonC getDragon() {
+        return dragon;
+    }
+
+    public void setDragon(DragonC dragon) {
+        this.dragon = dragon;
+    }
+
+    
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+   
     public Player getPlayer() {
         return player;
     }
