@@ -33,6 +33,16 @@ public class Dragon {
     
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        Dragon.logFile = logFile;
+    }
 
     public static PrintWriter getOutFile() {
         return outFile;
@@ -74,19 +84,26 @@ public class Dragon {
         try{
         Dragon.inFile = new BufferedReader(new InputStreamReader(System.in));
         Dragon.outFile = new PrintWriter(System.out, true);
+        String filePath = "log.txt";
+        Dragon.logFile = new PrintWriter(filePath);
         
             startProgramView.displayStartProgramView();
         } catch (Throwable te){
-        System.out.println(te.getMessage());
+        this.console.println(te.getMessage());
         te.printStackTrace();
         startProgramView.displayStartProgramView();
               }  
      finally {
             try {
+                if (Dragon.inFile != null)
                 Dragon.inFile.close();
+                if (Dragon.outFile != null)
                 Dragon.outFile.close();
+                if (Dragon.logFile != null)
+                    Dragon.logFile.close();
             } catch (IOException ex) {
-                Logger.getLogger(Dragon.class.getName()).log(Level.SEVERE, null, ex);
+                this.console.println("Error closing files");
+            return;
             }
         }   
     }

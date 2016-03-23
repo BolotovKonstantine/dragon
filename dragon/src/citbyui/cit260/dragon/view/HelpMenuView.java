@@ -44,14 +44,14 @@ public class HelpMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
     }
 
     private void goalOfTheGame() {
-        System.out.println("*** So, you have to help this "
+        this.console.println("*** So, you have to help this "
                 + "\nlittle dragon to grow up properly and be "
                 + "\nable fly away to find his mom. "
                 + "\nRemember, "
@@ -63,7 +63,7 @@ public class HelpMenuView extends View {
     }
 
     private void whatToDo() {
-        System.out.println("*** So, you have to do this: "
+        this.console.println("*** So, you have to do this: "
                 + "\nYou need to feed him right food in "
                 + "\nright amount, train him to certain level, "
                 + "\nwash him, teach him, play with him, "
@@ -72,11 +72,11 @@ public class HelpMenuView extends View {
     }
 
     private void dragonStatus() {
-        System.out.println("*** showDragonStatus function called ***");
+        this.console.println("*** showDragonStatus function called ***");
     }
 
     private void itemHelp() {
-        System.out.println("*** showItemHelps function called ***");
+        this.console.println("*** showItemHelps function called ***");
     }
 
 }

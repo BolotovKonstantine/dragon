@@ -44,25 +44,25 @@ public class FeedMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
     }
 
     private void foodSweets() {
-        System.out.println("*** foodSweets function called ***");
+        this.console.println("*** foodSweets function called ***");
     }
 
     private void foodMeat() {
-        System.out.println("*** foodMeat function called ***");
+        this.console.println("*** foodMeat function called ***");
     }
 
     private void foodVegetables() {
-        System.out.println("*** foodVegetables function called ***");
+        this.console.println("*** foodVegetables function called ***");
     }
 
     private void foodGrass() {
-        System.out.println("*** foodGrass function called ***");
+        this.console.println("*** foodGrass function called ***");
     }
 }

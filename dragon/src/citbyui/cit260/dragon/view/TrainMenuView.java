@@ -48,25 +48,25 @@ public class TrainMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
     }
 
     private void dragonBrain() {
-        System.out.println("*** dragonBrain function called ***");
+        this.console.println("*** dragonBrain function called ***");
     }
 
     private void dragonTail() {
-        System.out.println("*** dragonTail function called ***");
+        this.console.println("*** dragonTail function called ***");
     }
 
     private void dragonLegs() {
-        System.out.println("*** dragonLegs function called ***");
+        this.console.println("*** dragonLegs function called ***");
     }
 
     private void dragonWings() {
-        System.out.println("*** dragonWings function called ***");
+        this.console.println("*** dragonWings function called ***");
     }
 }

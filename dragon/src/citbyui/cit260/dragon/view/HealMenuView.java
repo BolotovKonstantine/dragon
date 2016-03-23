@@ -47,25 +47,25 @@ public class HealMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
     }
 
     private void dragonDoctor() {
-        System.out.println("*** dragonDoctor function called ***");
+        this.console.println("*** dragonDoctor function called ***");
     }
 
     private void hugDragon() {
-        System.out.println("*** hugDragon function called ***");
+        this.console.println("*** hugDragon function called ***");
     }
 
     private void takeIbprofen() {
-        System.out.println("*** takeIbprofen function called ***");
+        this.console.println("*** takeIbprofen function called ***");
     }
 
     private void takeXanax() {
-        System.out.println("*** takeXanax function called ***");
+        this.console.println("*** takeXanax function called ***");
     }
 }

@@ -48,25 +48,25 @@ public class PlayMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
     }
 
     private void ball() {
-        System.out.println("*** Ball function called ***");
+        this.console.println("*** Ball function called ***");
     }
 
     private void tickleDragon() {
-        System.out.println("*** tickleDragon function called ***");
+        this.console.println("*** tickleDragon function called ***");
     }
 
     private void hugDragon() {
-        System.out.println("*** hugDragon function called ***");
+        this.console.println("*** hugDragon function called ***");
     }
 
     private void numbers() {
-        System.out.println("*** numbers function called ***");
+        this.console.println("*** numbers function called ***");
     }
 }
