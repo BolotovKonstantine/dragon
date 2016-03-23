@@ -26,7 +26,6 @@ public class Game implements Serializable {
     public void setInventory(Items[] inventory) {
         this.inventory = inventory;
     }
-    
 
     public DragonC getDragon() {
         return dragon;
@@ -36,7 +35,6 @@ public class Game implements Serializable {
         this.dragon = dragon;
     }
 
-    
     public Shop getShop() {
         return shop;
     }
@@ -44,7 +42,7 @@ public class Game implements Serializable {
     public void setShop(Shop shop) {
         this.shop = shop;
     }
-   
+
     public Player getPlayer() {
         return player;
     }

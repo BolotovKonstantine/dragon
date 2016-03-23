@@ -29,7 +29,7 @@ public class Items implements Serializable {
     private String department;
 
     public Items() {
-        
+
     }
 
     public double getCost() {
