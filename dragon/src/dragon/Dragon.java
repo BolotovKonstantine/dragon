@@ -15,6 +15,9 @@ import byui.cit260.dragon.model.Game;
 import byui.cit260.dragon.model.Shop;
 import byui.cit260.dragon.model.Department;
 import citbyui.cit260.dragon.view.StartProgramView;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -24,6 +27,25 @@ public class Dragon {
 
     private static Game currentGame = null;
     private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        Dragon.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        Dragon.inFile = inFile;
+    }
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -47,12 +69,25 @@ public class Dragon {
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
         try{
+        Dragon.inFile = new BufferedReader(new InputStreamReader(System.in));
+        Dragon.outFile = new PrintWriter(System.out, true);
+        
             startProgramView.displayStartProgramView();
         } catch (Throwable te){
         System.out.println(te.getMessage());
         te.printStackTrace();
         startProgramView.displayStartProgramView();
-        }    
+              }  
+     finally {
+            try {
+            
+        Dragon.inFile.close();
+        Dragon.outFile.close();
+        }
+        catch (IOException ex) {
+        Logger.getLogger(Dragon.class.getName()).log(Level.SEVERE);
+        }
+        }   
     }
 
 }
