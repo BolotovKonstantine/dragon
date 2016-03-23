@@ -24,7 +24,7 @@ public class SleepMenuView {
                 this.deepSleep();
                 break;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;

@@ -8,12 +8,11 @@ package citbyui.cit260.dragon.view;
 import buyi.cit260.dragon.control.GameControl;
 import byui.cit260.dragon.model.Player;
 import java.util.Scanner;
-
-/**
+import java.io.IOException;/**
  *
  * @author Karina
  */
-public class StartProgramView {
+public class StartProgramView extends View {
 
     private String promptMessage;
 
@@ -51,7 +50,7 @@ public class StartProgramView {
         );
     }
 
-    public void displayStartProgramView() {
+    public void displayStartProgramView() throws IOException {
         /*
          do
          Prompt for and get the players name
@@ -72,12 +71,12 @@ public class StartProgramView {
         } while (!done);
     }
 
-    private String getPlayersName() {
+    private String getPlayersName() throws IOException {
         
         String value = "";
         boolean valid = false;
         while (!valid) {
-            this.console.println("\n" + this.promptMessage);
+            System.out.println("\n" + this.promptMessage);
             value = this.keyboard.readLine();
             value = value.trim();
             if (value.length() < 1) {
@@ -89,15 +88,15 @@ public class StartProgramView {
         return value;
     }
 
-    private boolean doAction(String playersName) {
+    public boolean doAction(String playersName) {
         if (playersName.length() < 2) {
-            this.console.println("\nInvalid players name: "
+            System.out.println("\nInvalid players name: "
                     + "The name must be greater than one character in lenth");
             return false;
         }
         Player player = GameControl.createPlayer(playersName);
         if (player == null) {
-            this.console.println("\nError creating the player.");
+            System.out.println("\nError creating the player.");
 
             return false;
         }
