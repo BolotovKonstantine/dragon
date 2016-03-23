@@ -89,7 +89,7 @@ public class Dragon {
         
             startProgramView.displayStartProgramView();
         } catch (Throwable te){
-        this.console.println(te.getMessage());
+        System.out.println(te.getMessage());
         te.printStackTrace();
         startProgramView.displayStartProgramView();
               }  
@@ -102,7 +102,7 @@ public class Dragon {
                 if (Dragon.logFile != null)
                     Dragon.logFile.close();
             } catch (IOException ex) {
-                this.console.println("Error closing files");
+                System.out.println("Error closing files");
             return;
             }
         }   
