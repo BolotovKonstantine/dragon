@@ -23,7 +23,7 @@ public class StartProgramView extends View {
     }
 
     private void displayBanner() {
-        this.console.println(
+        System.out.println(
                 "\n*****************************************************"
                 + "\n*                                                   *"
                 + "\n* This game about a dragon that was lost by his mom.*"
