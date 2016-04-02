@@ -7,10 +7,8 @@ package buyi.cit260.dragon.control;
 
 import byui.cit260.dragon.model.DragonC;
 import byui.cit260.dragon.model.Player;
-import buyi.cit260.dragon.control.DragonControl;
 import byui.cit260.dragon.exceptions.GameControlException;
 import byui.cit260.dragon.model.Game;
-import byui.cit260.dragon.model.Inventory;
 import byui.cit260.dragon.model.Items;
 import byui.cit260.dragon.model.Shop;
 import dragon.Dragon;
@@ -298,17 +296,13 @@ public class GameControl {
         return inventory;
     }
 
-    public static void saveGame(Game currentGame, String filePath) {
-    throws GameControlException {
-    try( FileOutputStream fops = new FileOutputStream(filePath)) {
-    ObjectOutputStream output = new ObjectOutputStream(fops);
-    output.writeObject(currentGame);
-       } 
-         catch(Exception e) {
-          throw new GameControlException(e.getMessage());
-          }
+    public static void saveGame(Game currentGame, String filePath) throws GameControlException {
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            output.writeObject(currentGame);
+        } catch (Exception e) {
+            throw new GameControlException(e.getMessage());
         }
-    
     }
 
     public void startNewGame(String playerName, String dragonName) {
@@ -321,7 +315,8 @@ public class GameControl {
         drC.initDragon(oldDragon);
 
     }
-        public boolean retriveGame(boolean retrGame) {
+
+    public boolean retriveGame(boolean retrGame) {
         return retrGame;
     }
 
@@ -333,14 +328,13 @@ public class GameControl {
 
     public static void getSavedGame(String filePath)
             throws GameControlException {
-    Game game = null;
-    try(FileInputStream fips = new FileInputStream(filePath)) {
-    ObjectInputStream input = new ObjectInputStream(fips);
-    game = (Game) input.readObject();
+        Game game = null;
+        try (FileInputStream fips = new FileInputStream(filePath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            game = (Game) input.readObject();
+        } catch (Exception e) {
+            throw new GameControlException(e.getMessage());
         }
-    catch(Exception e) {
-    throw new GameControlException(e.getMessage());
-    }
-    Dragon.setCurrentGame(game);
+        Dragon.setCurrentGame(game);
     }
 }

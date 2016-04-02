@@ -30,10 +30,10 @@ public class Dragon {
 
     private static Game currentGame = null;
     private static Player player = null;
-    
+
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
-    
+
     private static PrintWriter logFile = null;
 
     public static PrintWriter getLogFile() {
@@ -81,31 +81,33 @@ public class Dragon {
      */
     public static void main(String[] args) throws IOException {
         StartProgramView startProgramView = new StartProgramView();
-        try{
-        Dragon.inFile = new BufferedReader(new InputStreamReader(System.in));
-        Dragon.outFile = new PrintWriter(System.out, true);
-        String filePath = "log.txt";
-        Dragon.logFile = new PrintWriter(filePath);
-        
+        try {
+            Dragon.inFile = new BufferedReader(new InputStreamReader(System.in));
+            Dragon.outFile = new PrintWriter(System.out, true);
+            String filePath = "log.txt";
+            Dragon.logFile = new PrintWriter(filePath);
+
             startProgramView.displayStartProgramView();
-        } catch (Throwable te){
-        System.out.println(te.getMessage());
-        te.printStackTrace();
-        startProgramView.displayStartProgramView();
-              }  
-     finally {
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.displayStartProgramView();
+        } finally {
             try {
-                if (Dragon.inFile != null)
-                Dragon.inFile.close();
-                if (Dragon.outFile != null)
-                Dragon.outFile.close();
-                if (Dragon.logFile != null)
+                if (Dragon.inFile != null) {
+                    Dragon.inFile.close();
+                }
+                if (Dragon.outFile != null) {
+                    Dragon.outFile.close();
+                }
+                if (Dragon.logFile != null) {
                     Dragon.logFile.close();
+                }
             } catch (IOException ex) {
                 System.out.println("Error closing files");
-            return;
+                return;
             }
-        }   
+        }
     }
 
 }

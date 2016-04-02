@@ -5,6 +5,8 @@
  */
 package citbyui.cit260.dragon.view;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Bolotoff
@@ -48,20 +50,20 @@ public class HygeneMenuView extends View {
     private void takeBath() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public void printInventoryReport (ArrayList<Item> inventoryItems, String outputLocation) {
-    try (printWriter out = new PrintWriter(outputLocation)) {
-    out.println("\n\n      Inventory Report       ");
-    out.printf("%n%20s%10s%10s", "Description", "Quantity", "Price");
-    out.printf("%n%20s%10s%10s", "-----------", "---------", "--------");
-    
-    for (Item item : inventoryItems) {
-    out.printf("%n%-20s%7d%13.2f", item.getDescription()
-                                 , item.getQuantity()
-                                 , item.getPrice());
-    }
-    } catch (IOException ex) {
-    System.out.println("I/O Error: " + ex.getMessage());
-    }
-        }
+
+//    public void printInventoryReport (ArrayList<Item> inventoryItems, String outputLocation) {
+//    try (printWriter out = new PrintWriter(outputLocation)) {
+//    out.println("\n\n      Inventory Report       ");
+//    out.printf("%n%20s%10s%10s", "Description", "Quantity", "Price");
+//    out.printf("%n%20s%10s%10s", "-----------", "---------", "--------");
+//    
+//    for (Item item : inventoryItems) {
+//    out.printf("%n%-20s%7d%13.2f", item.getDescription()
+//                                 , item.getQuantity()
+//                                 , item.getPrice());
+//    }
+//    } catch (IOException ex) {
+//    System.out.println("I/O Error: " + ex.getMessage());
+//    }
+//        }
 }

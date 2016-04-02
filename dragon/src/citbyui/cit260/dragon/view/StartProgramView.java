@@ -8,7 +8,9 @@ package citbyui.cit260.dragon.view;
 import buyi.cit260.dragon.control.GameControl;
 import byui.cit260.dragon.model.Player;
 import java.util.Scanner;
-import java.io.IOException;/**
+import java.io.IOException;
+
+/**
  *
  * @author Karina
  */
@@ -72,7 +74,7 @@ public class StartProgramView extends View {
     }
 
     private String getPlayersName() throws IOException {
-        
+
         String value = "";
         boolean valid = false;
         while (!valid) {

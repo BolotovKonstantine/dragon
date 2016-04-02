@@ -65,20 +65,20 @@ public class FeedMenuView extends View {
     private void foodGrass() {
         this.console.println("*** foodGrass function called ***");
     }
-    
-    public void printInventoryReport (ArrayList<Item> inventoryItems, String outputLocation) {
-    try (printWriter out = new PrintWriter(outputLocation)) {
-    out.println("\n\n      Inventory Report       ");
-    out.printf("%n%20s%10s%10s", "Description", "Quantity", "Price");
-    out.printf("%n%20s%10s%10s", "-----------", "---------", "--------");
-    
-    for (Item item : inventoryItems) {
-    out.printf("%n%-20s%7d%13.2f", item.getDescription()
-                                 , item.getQuantity()
-                                 , item.getPrice());
-    }
-    } catch (IOException ex) {
-    System.out.println("I/O Error: " + ex.getMessage());
-    }
-        }
+
+//    public void printInventoryReport (ArrayList<Item> inventoryItems, String outputLocation) {
+//    try (printWriter out = new PrintWriter(outputLocation)) {
+//    out.println("\n\n      Inventory Report       ");
+//    out.printf("%n%20s%10s%10s", "Description", "Quantity", "Price");
+//    out.printf("%n%20s%10s%10s", "-----------", "---------", "--------");
+//    
+//    for (Item item : inventoryItems) {
+//    out.printf("%n%-20s%7d%13.2f", item.getDescription()
+//                                 , item.getQuantity()
+//                                 , item.getPrice());
+//    }
+//    } catch (IOException ex) {
+//    System.out.println("I/O Error: " + ex.getMessage());
+//    }
+//        }
 }

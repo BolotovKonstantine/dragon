@@ -9,8 +9,9 @@ package byui.cit260.dragon.exceptions;
  *
  * @author Karina
  */
-public class GameControlException extends Exception{
- public GameControlException() {
+public class GameControlException extends Exception {
+
+    public GameControlException() {
     }
 
     public GameControlException(String message) {
@@ -27,5 +28,5 @@ public class GameControlException extends Exception{
 
     public GameControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
-    }   
+    }
 }
