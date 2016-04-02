@@ -26,7 +26,7 @@ public abstract class View implements ViewInterface {
 
     public View() {
     }
-
+    
     public View(String message) {
         this.displayMessage = message;
     }

@@ -9,6 +9,8 @@ import buyi.cit260.dragon.control.GameControl;
 import byui.cit260.dragon.model.Player;
 import java.util.Scanner;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -74,18 +76,25 @@ public class StartProgramView extends View {
     }
 
     private String getPlayersName() throws IOException {
-
-        String value = "";
+        
+        String value = null;
         boolean valid = false;
+        
+        try {
         while (!valid) {
-            System.out.println("\n" + this.promptMessage);
+           this.console.println("\n" + this.promptMessage);
+            
             value = this.keyboard.readLine();
             value = value.trim();
             if (value.length() < 1) {
                 this.console.println("\nInvalid value: value can not be blank");
                 continue;
             }
+        
             break;
+        }
+        } catch(Exception e){
+        System.out.println("Error reading input" + e.getMessage());
         }
         return value;
     }

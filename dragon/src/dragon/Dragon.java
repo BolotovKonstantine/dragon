@@ -80,18 +80,17 @@ public class Dragon {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        StartProgramView startProgramView = new StartProgramView();
+        
         try {
             Dragon.inFile = new BufferedReader(new InputStreamReader(System.in));
             Dragon.outFile = new PrintWriter(System.out, true);
             String filePath = "log.txt";
             Dragon.logFile = new PrintWriter(filePath);
-
+            StartProgramView startProgramView = new StartProgramView();
             startProgramView.displayStartProgramView();
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
-            startProgramView.displayStartProgramView();
         } finally {
             try {
                 if (Dragon.inFile != null) {
