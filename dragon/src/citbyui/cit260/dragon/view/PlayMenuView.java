@@ -5,6 +5,11 @@
  */
 package citbyui.cit260.dragon.view;
 
+import buyi.cit260.dragon.control.DragonControl;
+import byui.cit260.dragon.model.DragonC;
+import byui.cit260.dragon.model.Game;
+import byui.cit260.dragon.model.Items;
+import dragon.Dragon;
 import java.util.Scanner;
 
 /**
@@ -55,11 +60,33 @@ public class PlayMenuView extends View {
     }
 
     private void ball() {
-        this.console.println("*** Ball function called ***");
+        this.console.println("*** You just played with your Dragon with ball***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getLegs(), 1);
+        dragon.setLegs(newStat);
+        control.getTired(dragon);
+        control.older(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
+        }
     }
 
     private void tickleDragon() {
-        this.console.println("*** tickleDragon function called ***");
+        this.console.println("*** You just tickled your Dragon***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getMood(), 1);
+        dragon.setMood(newStat);
+        control.older(dragon);
+        control.getTired(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
+        }
     }
 
     private void hugDragon() {

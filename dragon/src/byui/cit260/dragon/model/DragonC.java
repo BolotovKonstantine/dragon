@@ -15,7 +15,7 @@ import java.util.Objects;
 public class DragonC implements Serializable {
 
     private String name;
-    private int age;
+    private double age;
     private double mood;
     private double hygene;
     private boolean sick;
@@ -38,11 +38,11 @@ public class DragonC implements Serializable {
         this.name = name;
     }
 
-    public int getAge() {
+    public double getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(double age) {
         this.age = age;
     }
 
@@ -130,7 +130,7 @@ public class DragonC implements Serializable {
     public int hashCode() {
         int hash = 3;
         hash = 31 * hash + Objects.hashCode(this.name);
-        hash = 31 * hash + this.age;
+  
         hash = 31 * hash + (int) (Double.doubleToLongBits(this.mood) ^ (Double.doubleToLongBits(this.mood) >>> 32));
         hash = 31 * hash + (int) (Double.doubleToLongBits(this.hygene) ^ (Double.doubleToLongBits(this.hygene) >>> 32));
         hash = 31 * hash + (this.sick ? 1 : 0);

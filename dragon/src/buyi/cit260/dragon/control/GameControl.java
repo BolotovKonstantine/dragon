@@ -41,9 +41,9 @@ public class GameControl {
         game.setInventory(inventoryList);
         DragonC dragon = new DragonC();
         game.setDragon(dragon);
-        //DragonControl.initDragon(dragon);
-
-        Shop shop = new Shop();
+        DragonControl dragonControl = new DragonControl();
+        dragonControl.initDragon(dragon);
+        Shop shop = new Shop(); 
         game.setShop(shop);
     }
 

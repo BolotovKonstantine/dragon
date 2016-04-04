@@ -5,7 +5,11 @@
  */
 package citbyui.cit260.dragon.view;
 
-import java.util.Scanner;
+import byui.cit260.dragon.model.DragonC;
+import byui.cit260.dragon.model.Game;
+import byui.cit260.dragon.model.Inventory;
+import byui.cit260.dragon.model.Items;
+import dragon.Dragon;
 
 /**
  *
@@ -83,11 +87,35 @@ public class GameMenuView extends View {
     }
 
     private void showStat() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        StringBuilder line;
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        this.console.println("\nDragon current stat");
+        line = new StringBuilder("                            ");
+        line.insert(0, "CHARACTERISTIC");
+        line.insert(26, "NUMBER");
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "AGE");
+        line.insert(28, dragon.getAge());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "MOOD");
+        line.insert(27, dragon.getMood());
+        this.console.println(line.toString());
+        
+       
+try{System.in.read();}
+catch(Exception e){}
     }
 
     private void showInv() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     StringBuilder line;
+     Game game = Dragon.getCurrentGame();
+     Items[] inv = game.getInventory();
+     
+     try{System.in.read();}
+     catch(Exception e){}
     }
 
     private void playMenu() {
