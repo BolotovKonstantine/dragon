@@ -43,7 +43,7 @@ public class DragonControl {
     public double actionResult(double currentStatus, double modifier) {
         Game game = Dragon.getCurrentGame();
         DragonC dragon = game.getDragon();
-        double newModifier = dragon.getMood() * modifier ;
+        double newModifier = dragon.getTired() * modifier ;
         double newStatus = currentStatus + newModifier ;
         if (newStatus > 10) {
             return 10;
