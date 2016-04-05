@@ -5,13 +5,31 @@
  */
 package citbyui.cit260.dragon.view;
 
+import buyi.cit260.dragon.control.DragonControl;
+import byui.cit260.dragon.model.DragonC;
+import byui.cit260.dragon.model.Game;
+import byui.cit260.dragon.model.Items;
+import dragon.Dragon;
+
 /**
  *
  * @author Bolotoff
  */
-public class SleepMenuView {
-
-    private boolean doAction(String choice) {
+public class SleepMenuView extends View{
+    public SleepMenuView() {
+        super("\n"
+                + "\n----------------------------------------"
+                + "\n| Sleep Menu                            |"
+                + "\n----------------------------------------"
+                + "\nR -Rest"
+                + "\nL -Light sleep"
+                + "\nD -Deep Sleep"
+                + "\nQ - Quit"
+                + "\n----------------------------------------");
+    }
+    
+@Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
             case "R":
@@ -31,14 +49,53 @@ public class SleepMenuView {
     }
 
     private void giveRest() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("*** You gave rest to your Dragon ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = dragon.getTired() + 0.1;
+        dragon.setTired(newStat);
+        control.older(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
+        }
     }
-
     private void lightSleep() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("*** You gave rest to your Dragon ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = dragon.getTired() + 0.35;
+        dragon.setTired(newStat);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
+        }
     }
 
     private void deepSleep() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("*** You gave rest to your Dragon ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = dragon.getTired() + 0.65;
+        dragon.setTired(newStat);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        control.older(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
+        }
     }
 }

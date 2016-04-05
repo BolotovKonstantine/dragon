@@ -5,6 +5,11 @@
  */
 package citbyui.cit260.dragon.view;
 
+import buyi.cit260.dragon.control.DragonControl;
+import byui.cit260.dragon.model.DragonC;
+import byui.cit260.dragon.model.Game;
+import byui.cit260.dragon.model.Items;
+import dragon.Dragon;
 import java.util.Scanner;
 
 /**
@@ -55,18 +60,69 @@ public class TrainMenuView extends View {
     }
 
     private void dragonBrain() {
-        this.console.println("*** dragonBrain function called ***");
+        this.console.println("*** You trained dragon's brain ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getBrain(), 1);
+        dragon.setBrain(newStat);
+        double newStat1 = control.actionResult(dragon.getMood(), -1);
+        dragon.setMood(newStat1);
+        control.older(dragon);
+        control.getTired(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
     }
-
+    }
+    
     private void dragonTail() {
-        this.console.println("*** dragonTail function called ***");
+        this.console.println("*** You just trained dragon's tail ***");
+        
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getTail(), 1);
+        dragon.setTail(newStat);
+        double newStat1 = control.actionResult(dragon.getMood(), -1);
+        dragon.setMood(newStat1);
+        control.older(dragon);
+        control.getTired(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
     }
-
+    }
     private void dragonLegs() {
-        this.console.println("*** dragonLegs function called ***");
+        this.console.println("*** You just trained dragon's legs ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getLegs(), 1);
+        dragon.setLegs(newStat);
+        double newStat1 = control.actionResult(dragon.getMood(), -1);
+        dragon.setMood(newStat1);
+        control.older(dragon);
+        control.getTired(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
     }
-
+    }
     private void dragonWings() {
-        this.console.println("*** dragonWings function called ***");
+        this.console.println("*** You just trained dragon's wings ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getWings(), 1);
+        dragon.setWings(newStat);
+        double newStat1 = control.actionResult(dragon.getMood(), -1);
+        dragon.setMood(newStat1);
+        control.older(dragon);
+        control.getTired(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
     }
+}
 }

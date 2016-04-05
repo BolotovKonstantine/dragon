@@ -67,6 +67,8 @@ public class PlayMenuView extends View {
         DragonControl control = new DragonControl();
         double newStat = control.actionResult(dragon.getLegs(), 1);
         dragon.setLegs(newStat);
+        double newStat1 = control.actionResult(dragon.getShape(), -0.5);
+        dragon.setShape(newStat1);
         control.getTired(dragon);
         control.older(dragon);
         if(control.ifdead(dragon)){
@@ -103,15 +105,17 @@ public class PlayMenuView extends View {
         this.console.println("You just Killed your dragon");
         
     }
-
+    }
     private void numbers() {
         this.console.println("*** numbers function called ***");
         Game game = Dragon.getCurrentGame();
         DragonC dragon = game.getDragon();
         Items[] inv = game.getInventory();
         DragonControl control = new DragonControl();
-        double newStat = control.actionResult(dragon.getMood(), 1);
+        double newStat = control.actionResult(dragon.getBrain(), 1);
         dragon.setBrain(newStat);
+        double newStat1 = control.actionResult(dragon.getMood(), -1);
+        dragon.setMood(newStat1);
         control.older(dragon);
         control.getTired(dragon);
         if(control.ifdead(dragon)){

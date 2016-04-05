@@ -5,6 +5,7 @@
  */
 package citbyui.cit260.dragon.view;
 
+import buyi.cit260.dragon.control.DragonControl;
 import byui.cit260.dragon.model.DragonC;
 import byui.cit260.dragon.model.Game;
 import byui.cit260.dragon.model.Inventory;
@@ -97,7 +98,7 @@ public class GameMenuView extends View {
         this.console.println(line.toString());
         line = new StringBuilder("                             ");
         line.insert(0, "AGE");
-        line.insert(28, dragon.getAge());
+        line.insert(27, dragon.getAge());
         this.console.println(line.toString());
         line = new StringBuilder("                             ");
         line.insert(0, "MOOD");
@@ -106,14 +107,6 @@ public class GameMenuView extends View {
         line = new StringBuilder("                             ");
         line.insert(0, "HYGENE");
         line.insert(27, dragon.getHygene());
-        this.console.println(line.toString());
-        line = new StringBuilder("                             ");
-        line.insert(0, "SICK");
-        line.insert(27, dragon.getSick());
-        this.console.println(line.toString());
-        line = new StringBuilder("                             ");
-        line.insert(0, "SICKTYPE");
-        line.insert(27, dragon.getSickType());
         this.console.println(line.toString());
         line = new StringBuilder("                             ");
         line.insert(0, "WINGS");
@@ -138,6 +131,10 @@ public class GameMenuView extends View {
         line = new StringBuilder("                             ");
         line.insert(0, "BRAIN");
         line.insert(27, dragon.getBrain());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "SICKTYPE");
+        line.insert(27, dragon.getSickType());
         this.console.println(line.toString());
         
 try{System.in.read();}
@@ -189,7 +186,8 @@ catch(Exception e){}
     }
 
     private void sleepMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    SleepMenuView sleepMenu = new SleepMenuView();
+    sleepMenu.display();
     }
 
     private void sendPhoto() {
@@ -201,7 +199,25 @@ catch(Exception e){}
     }
 
     private void flyDragon() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     this.console.println("*** You throw your Dragon out the window ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        if (dragon.getSickType() == 0){
+            if (dragon.getWings() == 10){
+                if(dragon.getBrain() >8){
+                    if (dragon.getLegs() > 7){
+                        if (dragon.getTail() > 7){
+                            if (dragon.getShape() == 5){
+                               this.console.println("Your dragon will see his mommy. Bye-Bye!");
+                               return;
+                            }
+                        }
+                    }
+                }
+            } } this.console.println("Your dragon don't fly yet");
+            dragon.setSickType(4);
     }
 
     private void helpMenu() {

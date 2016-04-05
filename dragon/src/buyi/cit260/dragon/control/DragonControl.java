@@ -16,13 +16,35 @@ import dragon.Dragon;
 public class DragonControl {
 
     public double older(DragonC dragon) {
-        double newAge = dragon.getAge() + 0.3;
+        double old;
+        if (dragon.getSickType() > 0){
+          old = 0.6;          
+        } else {
+         old = 0.3;   
+        }
+        
+        double newAge = dragon.getAge() + old;
         dragon.setAge(newAge);
         if (newAge > 15) {
             return 100;
+        } 
+        double newHygene = dragon.getHygene() - 1;
+        if (newHygene < 0) { 
+            newHygene = 0;
         }
+        dragon.setHygene(newHygene);
+       if (dragon.getMood() == 0){
+           dragon.setSickType(1);
+       } 
+        if (dragon.getHygene() == 0){
+           dragon.setSickType(2);
+       }
+         if (dragon.getTired() == 0){
+           dragon.setSickType(3);
+       }
         return newAge;
     }
+    
     public boolean ifdead(DragonC dragon){
     if (dragon.getAge()>15)
     return true; else 
@@ -52,8 +74,8 @@ public class DragonControl {
             return 0;
         }
         return newStatus;
+    
     }
-
     public double calcModifier(double itemProp, double actionProp) {
         double newModifier = itemProp + actionProp;
         if (newModifier > 5) {

@@ -19,7 +19,7 @@ public class DragonC implements Serializable {
     private double mood;
     private double hygene;
     private boolean sick;
-    private String sickType;
+    private int sickType;
     private double wings;
     private double legs;
     private double tail;
@@ -70,11 +70,11 @@ public class DragonC implements Serializable {
         this.sick = sick;
     }
 
-    public String getSickType() {
+    public int getSickType() {
         return sickType;
     }
 
-    public void setSickType(String sickType) {
+    public void setSickType(int sickType) {
         this.sickType = sickType;
     }
 
@@ -134,7 +134,7 @@ public class DragonC implements Serializable {
         hash = 31 * hash + (int) (Double.doubleToLongBits(this.mood) ^ (Double.doubleToLongBits(this.mood) >>> 32));
         hash = 31 * hash + (int) (Double.doubleToLongBits(this.hygene) ^ (Double.doubleToLongBits(this.hygene) >>> 32));
         hash = 31 * hash + (this.sick ? 1 : 0);
-        hash = 31 * hash + Objects.hashCode(this.sickType);
+        
         hash = 31 * hash + (int) (Double.doubleToLongBits(this.wings) ^ (Double.doubleToLongBits(this.wings) >>> 32));
         hash = 31 * hash + (int) (Double.doubleToLongBits(this.legs) ^ (Double.doubleToLongBits(this.legs) >>> 32));
         hash = 31 * hash + (int) (Double.doubleToLongBits(this.tail) ^ (Double.doubleToLongBits(this.tail) >>> 32));
