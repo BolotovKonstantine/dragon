@@ -197,4 +197,8 @@ public class DragonC implements Serializable {
         return "DragonC{" + "name=" + name + ", age=" + age + ", mood=" + mood + ", hygene=" + hygene + ", sick=" + sick + ", sickType=" + sickType + ", wings=" + wings + ", legs=" + legs + ", tail=" + tail + ", shape=" + shape + ", tired=" + tired + ", brain=" + brain + '}';
     }
 
+    public Object getSick() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

@@ -103,8 +103,43 @@ public class GameMenuView extends View {
         line.insert(0, "MOOD");
         line.insert(27, dragon.getMood());
         this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "HYGENE");
+        line.insert(27, dragon.getHygene());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "SICK");
+        line.insert(27, dragon.getSick());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "SICKTYPE");
+        line.insert(27, dragon.getSickType());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "WINGS");
+        line.insert(27, dragon.getWings());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "LEGS");
+        line.insert(27, dragon.getLegs());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "TAIL");
+        line.insert(27, dragon.getTail());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "SHAPE");
+        line.insert(27, dragon.getShape());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "TIRED");
+        line.insert(27, dragon.getTired());
+        this.console.println(line.toString());
+        line = new StringBuilder("                             ");
+        line.insert(0, "BRAIN");
+        line.insert(27, dragon.getBrain());
+        this.console.println(line.toString());
         
-       
 try{System.in.read();}
 catch(Exception e){}
     }
@@ -114,10 +149,20 @@ catch(Exception e){}
      Game game = Dragon.getCurrentGame();
      Items[] inv = game.getInventory();
      
+     
      try{System.in.read();}
      catch(Exception e){}
     }
-
+    /*public static InventoryItem[] createInventoryList(){
+    InventoryItem[] inventory = new InventoryItem[14];
+    InventoryItem meat = new InventoryItem();
+    meat.setDescription("Meat");
+    meat.setQuantityStoke(0);
+    meat.setRequiredAmount(0);
+    inventory[0] = meat;
+    
+    return inventory;
+    }*/
     private void playMenu() {
         PlayMenuView playMenu = new PlayMenuView();
         playMenu.display();

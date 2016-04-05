@@ -91,9 +91,32 @@ public class PlayMenuView extends View {
 
     private void hugDragon() {
         this.console.println("*** hugDragon function called ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getMood(), 1);
+        dragon.setMood(newStat);
+        control.older(dragon);
+        control.getTired(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
+        
     }
 
     private void numbers() {
         this.console.println("*** numbers function called ***");
+        Game game = Dragon.getCurrentGame();
+        DragonC dragon = game.getDragon();
+        Items[] inv = game.getInventory();
+        DragonControl control = new DragonControl();
+        double newStat = control.actionResult(dragon.getMood(), 1);
+        dragon.setBrain(newStat);
+        control.older(dragon);
+        control.getTired(dragon);
+        if(control.ifdead(dragon)){
+        this.console.println("You just Killed your dragon");
+       
     }
+  }
 }

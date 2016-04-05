@@ -79,7 +79,7 @@ public class GameControl {
         blocks.setWings(0);
         blocks.setShape(2);
         blocks.setSick(false);
-        inventory[0] = blocks;
+        inventory[1] = blocks;
 
         Items book = new Items();
         book.setName("book");
@@ -94,7 +94,7 @@ public class GameControl {
         book.setWings(0);
         book.setShape(2);
         book.setSick(false);
-        inventory[0] = book;
+        inventory[2] = book;
 
         Items skippingRope = new Items();
         skippingRope.setName("skipping rope");
@@ -109,7 +109,7 @@ public class GameControl {
         skippingRope.setWings(0);
         skippingRope.setShape(2);
         skippingRope.setSick(false);
-        inventory[0] = skippingRope;
+        inventory[3] = skippingRope;
 
         Items dumbbells = new Items();
         dumbbells.setName("dumbbells");
@@ -124,7 +124,7 @@ public class GameControl {
         dumbbells.setWings(0);
         dumbbells.setShape(2);
         dumbbells.setSick(false);
-        inventory[0] = dumbbells;
+        inventory[4] = dumbbells;
         //rubber band, Ibprofen, Xanax, foam bath, shampoo, 
 
         Items rubberBand = new Items();
@@ -140,7 +140,7 @@ public class GameControl {
         rubberBand.setWings(0);
         rubberBand.setShape(2);
         rubberBand.setSick(false);
-        inventory[0] = rubberBand;
+        inventory[5] = rubberBand;
 
         Items Ibprofen = new Items();
         Ibprofen.setName("Ibprofen");
@@ -155,7 +155,7 @@ public class GameControl {
         Ibprofen.setWings(0);
         Ibprofen.setShape(2);
         Ibprofen.setSick(false);
-        inventory[0] = Ibprofen;
+        inventory[6] = Ibprofen;
 
         Items Xanax = new Items();
         Xanax.setName("Xanax");
@@ -170,7 +170,7 @@ public class GameControl {
         Xanax.setWings(0);
         Xanax.setShape(2);
         Xanax.setSick(false);
-        inventory[0] = Xanax;
+        inventory[7] = Xanax;
 
         Items bathFoam = new Items();
         bathFoam.setName("bath Foam");
@@ -185,7 +185,7 @@ public class GameControl {
         bathFoam.setWings(0);
         bathFoam.setShape(2);
         bathFoam.setSick(false);
-        inventory[0] = bathFoam;
+        inventory[8] = bathFoam;
 
         Items shampoo = new Items();
         shampoo.setName("shampoo");
@@ -200,7 +200,7 @@ public class GameControl {
         shampoo.setWings(0);
         shampoo.setShape(2);
         shampoo.setSick(false);
-        inventory[0] = shampoo;
+        inventory[9] = shampoo;
 
         //toothbrush, Sweets, Meat, Vegetables, pillow, blanket.  
         Items toothbrush = new Items();
@@ -216,7 +216,7 @@ public class GameControl {
         toothbrush.setWings(0);
         toothbrush.setShape(2);
         toothbrush.setSick(false);
-        inventory[0] = toothbrush;
+        inventory[10] = toothbrush;
 
         Items sweets = new Items();
         sweets.setName("sweets");
@@ -231,7 +231,7 @@ public class GameControl {
         sweets.setWings(0);
         sweets.setShape(2);
         sweets.setSick(false);
-        inventory[0] = sweets;
+        inventory[11] = sweets;
 
         Items meat = new Items();
         meat.setName("meat");
@@ -246,7 +246,7 @@ public class GameControl {
         meat.setWings(0);
         meat.setShape(2);
         meat.setSick(false);
-        inventory[0] = meat;
+        inventory[12] = meat;
 
         Items vegetables = new Items();
         vegetables.setName("vegetables");
@@ -261,7 +261,7 @@ public class GameControl {
         vegetables.setWings(0);
         vegetables.setShape(2);
         vegetables.setSick(false);
-        inventory[0] = vegetables;
+        inventory[13] = vegetables;
 
         Items pillow = new Items();
         pillow.setName("pillow");
@@ -276,7 +276,7 @@ public class GameControl {
         pillow.setWings(0);
         pillow.setShape(2);
         pillow.setSick(false);
-        inventory[0] = pillow;
+        inventory[14] = pillow;
 
         Items blanket = new Items();
         blanket.setName("blanket");
@@ -291,11 +291,30 @@ public class GameControl {
         blanket.setWings(0);
         blanket.setShape(2);
         blanket.setSick(false);
-        inventory[0] = blanket;
+        inventory[15] = blanket;
 
         return inventory;
     }
 
+    public enum Item {
+    ball,
+    blocks,
+    book,
+    skippingRope,
+    dumbbells,
+    rubberBand,
+    Ibprofen,
+    Xanax,
+    bathFoam,
+    shampoo,
+    toothbrush,
+    sweets,
+    meat,
+    vegetables,
+    pillow,
+    blanket;
+    }
+    
     public static void saveGame(Game currentGame, String filePath) throws GameControlException {
         try (FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
